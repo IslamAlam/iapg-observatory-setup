@@ -1,0 +1,1 @@
+# iapg-observatory-setup
