@@ -21,6 +21,9 @@ MINIFORGE_VERSION="${miniforge_version}"
 PYTHON_VERSION=default
 # Prerequisites installation: conda, pip, tini
 # Prerequisites installation: conda, pip, tini
+
+if [[ ! -d $CONDA_DIR ]]; then
+
 wget "https://github.com/conda-forge/miniforge/releases/download/${miniforge_version}/${miniforge_installer}" && \
     echo "${miniforge_checksum}" | sha256sum --check && \
     rm -rf $CONDA_DIR  && \
@@ -41,3 +44,5 @@ wget "https://github.com/conda-forge/miniforge/releases/download/${miniforge_ver
     conda clean --all -f -y && \
     rm -rf $HOME/.cache/yarn && \ 
     conda init
+
+fi
