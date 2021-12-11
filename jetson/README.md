@@ -42,6 +42,10 @@ In the video, we:
 
 #### Step 3
 
+```
+sudo cp /boot/extlinux/extlinux.conf  /boot/extlinux/extlinux.conf.bk
+```
+
 Modify the /boot/extlinux/extlinux.conf file on the USB drive. An entry should be added to point to the new rootfs (typically this is /dev/sda1). There is a sample configuration file: sample-extlinux.conf in the repository.
 
 Modify the /boot/extlinux/extlinux.conf file located on the USB drive. This is in a system protected area, so you will need privileges to change the file, ie ‘sudo gedit’. Make a copy of the ‘PRIMARY’ entry and rename it sdcard.
