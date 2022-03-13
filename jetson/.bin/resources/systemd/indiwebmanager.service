@@ -1,0 +1,12 @@
+[UNIT]
+Description=INDI Web Manager
+After=multi-user.target
+
+[Service]
+Type=idle
+User=ubuntu
+ExecStart=/opt/miniforge/bin/indi-web -v
+Restart=Always
+RestartSec=5
+[Install]
+WantedBy=multi-user.target
